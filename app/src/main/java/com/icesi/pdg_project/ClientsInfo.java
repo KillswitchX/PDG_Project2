@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ public class ClientsInfo extends AppCompatActivity {
 
     private TableLayout tableLayout;
 
+    private Spinner spinnerClients;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +34,20 @@ public class ClientsInfo extends AppCompatActivity {
         clients = new ArrayList<>();
         initTestClients();
         initView();
+        createColumns();
+        fillDataIntoTable(clients);
 
     }
 
 
     private void initView() {
+
         tableLayout = (TableLayout) findViewById(R.id.tableLayoutClients);
+        spinnerClients = findViewById(R.id.clients_spinner_chooser);
     }
 
 
-    private void initTestClients(){
+    private void initTestClients() {
         Client client = new Client();
 
         client.setAge(26);
@@ -61,6 +68,150 @@ public class ClientsInfo extends AppCompatActivity {
 
         clients.add(client);
 
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
+        client.setAge(22);
+        client.setGenre('m');
+        client.setAvailableMinutes(200);
+        client.setPlanDuration(60);
+        client.setPlanPrice(45000);
+        client.setSocialClass(2);
+
+        clients.add(client);
+
     }
 
     private void createColumns() {
@@ -69,41 +220,42 @@ public class ClientsInfo extends AppCompatActivity {
                 TableRow.LayoutParams.FILL_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT));
 
-        // Id Column
+        // Age title
         TextView textViewAge = new TextView(this);
         textViewAge.setText("Edad");
         textViewAge.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAge.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAge);
 
-        // Name Column
+        // Genre Title
         TextView textViewGenre = new TextView(this);
         textViewGenre.setText("Género");
         textViewGenre.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewGenre.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewGenre);
 
-        // Name Column
+        // Social Class Title
         TextView textViewSocialClass = new TextView(this);
         textViewSocialClass.setText("Estrato");
         textViewSocialClass.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewSocialClass.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewSocialClass);
 
+        //Plan Duration title
         TextView textViewPlanDuration = new TextView(this);
         textViewPlanDuration.setText("Duración Plan");
         textViewPlanDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewPlanDuration.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewPlanDuration);
 
-
+        //Available Minutes Plan Title
         TextView textViewAvailableMinutes = new TextView(this);
         textViewAvailableMinutes.setText("Minutos Disponibles Plan");
         textViewAvailableMinutes.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAvailableMinutes.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAvailableMinutes);
 
-        // Price Column
+        // Plan Price title
         TextView textViewPrice = new TextView(this);
         textViewPrice.setText("Precio");
         textViewPrice.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
@@ -121,42 +273,42 @@ public class ClientsInfo extends AppCompatActivity {
                 TableRow.LayoutParams.FILL_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT));
 
-        // Id Column
+        // Divider Age
         textViewAge = new TextView(this);
         textViewAge.setText("-----------");
         textViewAge.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAge.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAge);
 
-        // Name Column
+        // Divider Genre
         textViewGenre = new TextView(this);
         textViewGenre.setText("-----------");
         textViewGenre.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewGenre.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewGenre);
 
-        // Name Column
+        // Divider Social Class
         textViewSocialClass = new TextView(this);
         textViewSocialClass.setText("-----------");
         textViewSocialClass.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewSocialClass.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewSocialClass);
 
-        // Price Column
+        // Divider Plan Duration
         textViewPlanDuration = new TextView(this);
         textViewPlanDuration.setText("-----------");
         textViewPlanDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewPlanDuration.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewPlanDuration);
 
-        // Price Column
+        // Divider Available Minutes
         textViewAvailableMinutes = new TextView(this);
         textViewAvailableMinutes.setText("-----------");
         textViewAvailableMinutes.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAvailableMinutes.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAvailableMinutes);
 
-        // Price Column
+        // Divider Price Plan
         textViewPrice = new TextView(this);
         textViewPrice.setText("-----------");
         textViewPrice.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
@@ -164,11 +316,70 @@ public class ClientsInfo extends AppCompatActivity {
         tableRow.addView(textViewPrice);
 
 
-
         tableLayout.addView(tableRow, new TableLayout.LayoutParams(
                 TableRow.LayoutParams.FILL_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT));
 
+    }
+
+    private void fillDataIntoTable(ArrayList<Client> clientsToFill) {
+        int size = clientsToFill.size();
+        Client currentClient = null;
+        for (int i = 0; i < size; i++) {
+            TableRow tableRow = new TableRow(this);
+            tableRow.setLayoutParams(new TableRow.LayoutParams(
+                    TableRow.LayoutParams.FILL_PARENT,
+                    TableRow.LayoutParams.WRAP_CONTENT));
+
+            currentClient = clientsToFill.get(i);
+
+            // Divider Age
+            TextView textViewAge = new TextView(this);
+            textViewAge.setText(currentClient.getAge()+"");
+            textViewAge.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewAge.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewAge);
+
+            // Divider Genre
+            TextView textViewGenre = new TextView(this);
+            textViewGenre.setText(currentClient.getGenre() + "");
+            textViewGenre.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewGenre.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewGenre);
+
+            // Divider Social Class
+            TextView textViewSocialClass = new TextView(this);
+            textViewSocialClass.setText(currentClient.getSocialClass()+"");
+            textViewSocialClass.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewSocialClass.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewSocialClass);
+
+            // Divider Plan Duration
+            TextView textViewPlanDuration = new TextView(this);
+            textViewPlanDuration.setText(currentClient.getPlanDuration()+"");
+            textViewPlanDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewPlanDuration.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewPlanDuration);
+
+            // Divider Available Minutes
+            TextView textViewAvailableMinutes = new TextView(this);
+            textViewAvailableMinutes.setText(currentClient.getAvailableMinutes()+"");
+            textViewAvailableMinutes.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewAvailableMinutes.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewAvailableMinutes);
+
+            // Divider Price Plan
+            TextView textViewPrice = new TextView(this);
+            textViewPrice.setText(currentClient.getPlanPrice() +"");
+            textViewPrice.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+            textViewPrice.setPadding(5, 5, 5, 0);
+            tableRow.addView(textViewPrice);
+
+            tableLayout.addView(tableRow, new TableLayout.LayoutParams(
+                    TableRow.LayoutParams.FILL_PARENT,
+                    TableRow.LayoutParams.WRAP_CONTENT));
+
+        }
     }
 
 

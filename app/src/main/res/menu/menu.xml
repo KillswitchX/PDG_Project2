@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Diagramas"
+        android:icon="@mipmap/ic_launcher_round"
+        android:id="@+id/menu_diagram"
+        />
+    <item android:title="Metricas"
+        android:icon="@mipmap/ic_launcher_round"
+        android:id="@+id/menu_metric"
+        />
+    <item android:title="CLientes"
+        android:icon="@mipmap/ic_launcher_round"
+        android:id="@+id/menu_client"
+        />
+    <item android:title="Planificación"
+        android:icon="@mipmap/ic_launcher_round"
+        android:id="@+id/menu_planning"
+        />
+</menu>

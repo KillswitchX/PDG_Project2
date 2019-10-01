@@ -222,35 +222,35 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Age title
         TextView textViewAge = new TextView(this);
-        textViewAge.setText("Edad");
+        textViewAge.setText("Edad                       k");
         textViewAge.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAge.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAge);
 
         // Genre Title
         TextView textViewGenre = new TextView(this);
-        textViewGenre.setText("Género");
+        textViewGenre.setText("Género                   l");
         textViewGenre.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewGenre.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewGenre);
 
         // Social Class Title
         TextView textViewSocialClass = new TextView(this);
-        textViewSocialClass.setText("Estrato");
+        textViewSocialClass.setText("Estrato             a");
         textViewSocialClass.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewSocialClass.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewSocialClass);
 
         //Plan Duration title
         TextView textViewPlanDuration = new TextView(this);
-        textViewPlanDuration.setText("Duración Plan");
+        textViewPlanDuration.setText("Duración Plan               ñ");
         textViewPlanDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewPlanDuration.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewPlanDuration);
 
         //Available Minutes Plan Title
         TextView textViewAvailableMinutes = new TextView(this);
-        textViewAvailableMinutes.setText("Minutos Disponibles Plan");
+        textViewAvailableMinutes.setText("Minutos Disponibles Plan            t");
         textViewAvailableMinutes.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAvailableMinutes.setPadding(5, 5, 5, 0);
         tableRow.addView(textViewAvailableMinutes);

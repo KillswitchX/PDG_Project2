@@ -4,11 +4,11 @@
         android:icon="@mipmap/ic_launcher_round"
         android:id="@+id/menu_diagram"
         />
-    <item android:title="Metricas"
+    <item android:title="Métricas"
         android:icon="@mipmap/ic_launcher_round"
         android:id="@+id/menu_metric"
         />
-    <item android:title="CLientes"
+    <item android:title="Clientes"
         android:icon="@mipmap/ic_launcher_round"
         android:id="@+id/menu_client"
         />

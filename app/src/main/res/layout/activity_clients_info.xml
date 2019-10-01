@@ -11,17 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/clients_navigation"
-
+        android:orientation="vertical"
         >
 
         <Spinner
             android:id="@+id/clients_spinner_chooser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center|top"
+            
             >
 
 
         </Spinner>
+
+
 
         <ScrollView
             android:layout_width="wrap_content"
@@ -30,11 +35,19 @@
 
             >
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
             <TableLayout
                 android:id="@+id/tableLayoutClients"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="horizontal"></TableLayout>
+                android:orientation="horizontal">
+
+            </TableLayout>
+
+            </HorizontalScrollView>
 
         </ScrollView>
 

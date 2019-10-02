@@ -169,7 +169,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewCollege = new TextView(this);
         textViewCollege.setText("Universidad  ");
         textViewCollege.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewCollege.setPadding(5, 5, 5, 0);
+        textViewCollege.setPadding(15, 5, 5, 0);
         textViewCollege.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewCollege);
 
@@ -177,7 +177,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewIncome = new TextView(this);
         textViewIncome.setText("Ingresos  ");
         textViewIncome.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewIncome.setPadding(5, 5, 5, 0);
+        textViewIncome.setPadding(15, 5, 5, 0);
         textViewIncome.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewIncome);
 
@@ -185,7 +185,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewOverage = new TextView(this);
         textViewOverage.setText("Sobrecargo promedio por mes  ");
         textViewOverage.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewOverage.setPadding(5, 5, 5, 0);
+        textViewOverage.setPadding(15, 5, 5, 0);
         textViewOverage.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewOverage);
 
@@ -193,7 +193,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewLeftover = new TextView(this);
         textViewLeftover.setText("Promedio de minutos sobrantes por mes  ");
         textViewLeftover.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewLeftover.setPadding(5, 5, 5, 0);
+        textViewLeftover.setPadding(15, 5, 5, 0);
         textViewLeftover.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewLeftover);
 
@@ -201,7 +201,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewHouse = new TextView(this);
         textViewHouse.setText("Valor de la vivienda  ");
         textViewHouse.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewHouse.setPadding(5, 5, 5, 0);
+        textViewHouse.setPadding(15, 5, 5, 0);
         textViewHouse.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewHouse);
 
@@ -209,7 +209,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewHandsetPrice = new TextView(this);
         textViewHandsetPrice.setText("Costo del celular  ");
         textViewHandsetPrice.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewHandsetPrice.setPadding(5, 5, 5, 0);
+        textViewHandsetPrice.setPadding(15, 5, 5, 0);
         textViewHandsetPrice.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewHandsetPrice);
 
@@ -217,7 +217,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewOver15 = new TextView(this);
         textViewOver15.setText("Promedio llamadas (>15 min) por mes  ");
         textViewOver15.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewOver15.setPadding(5, 5, 5, 0);
+        textViewOver15.setPadding(15, 5, 5, 0);
         textViewOver15.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewOver15);
 
@@ -225,7 +225,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewAverageCallDuration = new TextView(this);
         textViewAverageCallDuration.setText("Duracion promedio de llamadas  ");
         textViewAverageCallDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewAverageCallDuration.setPadding(5, 5, 5, 0);
+        textViewAverageCallDuration.setPadding(15, 5, 5, 0);
         textViewAverageCallDuration.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewAverageCallDuration);
 
@@ -233,7 +233,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewReportedSatisfaction = new TextView(this);
         textViewReportedSatisfaction.setText("Nivel de satisfacción reportada  ");
         textViewReportedSatisfaction.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewReportedSatisfaction.setPadding(5, 5, 5, 0);
+        textViewReportedSatisfaction.setPadding(15, 5, 5, 0);
         textViewReportedSatisfaction.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewReportedSatisfaction);
 
@@ -241,7 +241,7 @@ public class ClientsInfo extends AppCompatActivity {
         TextView textViewReportedUsageLevel = new TextView(this);
         textViewReportedUsageLevel.setText("Nivel de uso reportado  ");
         textViewReportedUsageLevel.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        textViewReportedUsageLevel.setPadding(5, 5, 5, 0);
+        textViewReportedUsageLevel.setPadding(15, 5, 5, 0);
         textViewReportedUsageLevel.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         tableRow.addView(textViewReportedUsageLevel);
 
@@ -268,70 +268,70 @@ public class ClientsInfo extends AppCompatActivity {
             TextView textViewCollege = new TextView(this);
             textViewCollege.setText(currentClient.getCollege());
 
-            textViewCollege.setPadding(5, 5, 5, 0);
+            textViewCollege.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewCollege);
 
             // Income
             TextView textViewIncome = new TextView(this);
             textViewIncome.setText(currentClient.getIncome()+"");
 
-            textViewIncome.setPadding(5, 5, 5, 0);
+            textViewIncome.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewIncome);
 
             // Overage
             TextView textViewOverage = new TextView(this);
             textViewOverage.setText(currentClient.getOverage()+"");
 
-            textViewOverage.setPadding(5, 5, 5, 0);
+            textViewOverage.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewOverage);
 
             // LeftOver
             TextView textViewLeftover = new TextView(this);
             textViewLeftover.setText(currentClient.getLeftover()+"");
 
-            textViewLeftover.setPadding(5, 5, 5, 0);
+            textViewLeftover.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewLeftover);
 
             // House
             TextView textViewHouse = new TextView(this);
             textViewHouse.setText(currentClient.getHouse()+"");
 
-            textViewHouse.setPadding(5, 5, 5, 0);
+            textViewHouse.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewHouse);
 
             // Handset Price
             TextView textViewHandsetPrice = new TextView(this);
             textViewHandsetPrice.setText(currentClient.getHandsetPrice()+"");
 
-            textViewHandsetPrice.setPadding(5, 5, 5, 0);
+            textViewHandsetPrice.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewHandsetPrice);
 
             // Average calls Over 15 minutes
             TextView textViewOver15 = new TextView(this);
             textViewOver15.setText(currentClient.getOver15()+"");
 
-            textViewOver15.setPadding(5, 5, 5, 0);
+            textViewOver15.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewOver15);
 
             // Average Call Duration
             TextView textViewAverageCallDuration = new TextView(this);
             textViewAverageCallDuration.setText(currentClient.getAverageCallDuration()+"");
 
-            textViewAverageCallDuration.setPadding(5, 5, 5, 0);
+            textViewAverageCallDuration.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewAverageCallDuration);
 
             // Reported Satisfaction
             TextView textViewReportedSatisfaction = new TextView(this);
             textViewReportedSatisfaction.setText(currentClient.getReportedSatisfaction());
 
-            textViewReportedSatisfaction.setPadding(5, 5, 5, 0);
+            textViewReportedSatisfaction.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewReportedSatisfaction);
 
             // Reported Usage Level
             TextView textViewReportedUsageLevel = new TextView(this);
             textViewReportedUsageLevel.setText(currentClient.getReportedUsageLevel());
 
-            textViewReportedUsageLevel.setPadding(5, 5, 5, 0);
+            textViewReportedUsageLevel.setPadding(15, 5, 5, 0);
             tableRow.addView(textViewReportedUsageLevel);
 
 

@@ -4,77 +4,121 @@ import java.io.Serializable;
 
 public class Client implements Serializable {
 
-    private char genre;
+    private String college;
 
-    private int age;
+    private int income;
 
-    private int socialClass;
+    private int overage;
 
-    private int planDuration;
+    private int leftover;
 
-    private int availableMinutes;
+    private int house;
 
-    private double planPrice;
+    private int handsetPrice;
+
+    private int over15;
+
+    private int averageCallDuration;
+
+    private String reportedSatisfaction;
+
+    private String reportedUsageLevel;
 
 
-    public Client(){
+    public Client() {
 
     }
 
-    public Client(char genre, int age, int socialClass, int planDuration, int availableMinutes, double planPrice) {
-        this.genre = genre;
-        this.age = age;
-        this.socialClass = socialClass;
-        this.planDuration = planDuration;
-        this.availableMinutes = availableMinutes;
-        this.planPrice = planPrice;
+    public Client(String college, int income, int overage, int leftover, int house, int handsetPrice, int over15, int averageCallDuration, String reportedSatisfaction, String reportedUsageLevel) {
+        this.college = college;
+        this.income = income;
+        this.overage = overage;
+        this.leftover = leftover;
+        this.house = house;
+        this.handsetPrice = handsetPrice;
+        this.over15 = over15;
+        this.averageCallDuration = averageCallDuration;
+        this.reportedSatisfaction = reportedSatisfaction;
+        this.reportedUsageLevel = reportedUsageLevel;
     }
 
-    public char getGenre() {
-        return genre;
+    public String getCollege() {
+        return college;
     }
 
-    public void setGenre(char genre) {
-        this.genre = genre;
+    public void setCollege(String college) {
+        this.college = college;
     }
 
-    public int getAge() {
-        return age;
+    public int getIncome() {
+        return income;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setIncome(int income) {
+        this.income = income;
     }
 
-    public int getSocialClass() {
-        return socialClass;
+    public int getOverage() {
+        return overage;
     }
 
-    public void setSocialClass(int socialClass) {
-        this.socialClass = socialClass;
+    public void setOverage(int overage) {
+        this.overage = overage;
     }
 
-    public int getPlanDuration() {
-        return planDuration;
+    public int getLeftover() {
+        return leftover;
     }
 
-    public void setPlanDuration(int planDuration) {
-        this.planDuration = planDuration;
+    public void setLeftover(int leftover) {
+        this.leftover = leftover;
     }
 
-    public int getAvailableMinutes() {
-        return availableMinutes;
+    public int getHouse() {
+        return house;
     }
 
-    public void setAvailableMinutes(int availableMinutes) {
-        this.availableMinutes = availableMinutes;
+    public void setHouse(int house) {
+        this.house = house;
     }
 
-    public double getPlanPrice() {
-        return planPrice;
+    public int getHandsetPrice() {
+        return handsetPrice;
     }
 
-    public void setPlanPrice(double planPrice) {
-        this.planPrice = planPrice;
+    public void setHandsetPrice(int handsetPrice) {
+        this.handsetPrice = handsetPrice;
+    }
+
+    public int getOver15() {
+        return over15;
+    }
+
+    public void setOver15(int over15) {
+        this.over15 = over15;
+    }
+
+    public int getAverageCallDuration() {
+        return averageCallDuration;
+    }
+
+    public void setAverageCallDuration(int averageCallDuration) {
+        this.averageCallDuration = averageCallDuration;
+    }
+
+    public String getReportedSatisfaction() {
+        return reportedSatisfaction;
+    }
+
+    public void setReportedSatisfaction(String reportedSatisfaction) {
+        this.reportedSatisfaction = reportedSatisfaction;
+    }
+
+    public String getReportedUsageLevel() {
+        return reportedUsageLevel;
+    }
+
+    public void setReportedUsageLevel(String reportedUsageLevel) {
+        this.reportedUsageLevel = reportedUsageLevel;
     }
 }

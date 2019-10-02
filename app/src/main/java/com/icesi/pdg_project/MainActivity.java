@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        navigation.getMenu().findItem(R.id.menu_metric).setChecked(true);
+
     }
 
 

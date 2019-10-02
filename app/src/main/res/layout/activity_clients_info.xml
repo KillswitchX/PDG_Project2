@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center|top"
+            android:layout_marginBottom="10dp"
             
             >
 
@@ -43,7 +44,12 @@
                 android:id="@+id/tableLayoutClients"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:divider="?android:attr/dividerVertical"
+                android:stretchColumns="1"
+                android:showDividers="beginning|middle|end"
+
+                >
 
             </TableLayout>
 

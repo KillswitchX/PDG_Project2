@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemReselected(int itemIndex, String itemName) {
 
 
+
             }
 
         });
@@ -79,5 +80,6 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(homeIntent);
+        //
     }
 }

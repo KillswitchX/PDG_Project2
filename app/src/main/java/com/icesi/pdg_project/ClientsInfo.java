@@ -133,8 +133,8 @@ public class ClientsInfo extends AppCompatActivity {
 
         client = new Client();
         client.setCollege("one");
-        client.setIncome(31953);
-        client.setOverage(0);
+        client.setIncome(40000);
+        client.setOverage(5);
         client.setLeftover(6);
         client.setHouse(313378);
         client.setHandsetPrice(161);
@@ -147,8 +147,8 @@ public class ClientsInfo extends AppCompatActivity {
 
         client = new Client();
         client.setCollege("zero");
-        client.setIncome(31953);
-        client.setOverage(0);
+        client.setIncome(35666);
+        client.setOverage(10);
         client.setLeftover(6);
         client.setHouse(313378);
         client.setHandsetPrice(161);
@@ -161,8 +161,8 @@ public class ClientsInfo extends AppCompatActivity {
 
         client = new Client();
         client.setCollege("one");
-        client.setIncome(31953);
-        client.setOverage(0);
+        client.setIncome(38600);
+        client.setOverage(15);
         client.setLeftover(6);
         client.setHouse(313378);
         client.setHandsetPrice(161);
@@ -175,8 +175,148 @@ public class ClientsInfo extends AppCompatActivity {
 
         client = new Client();
         client.setCollege("zero");
-        client.setIncome(31953);
-        client.setOverage(0);
+        client.setIncome(27596);
+        client.setOverage(20);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("one");
+        client.setIncome(33614);
+        client.setOverage(25);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("zero");
+        client.setIncome(42371);
+        client.setOverage(30);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("one");
+        client.setIncome(29964);
+        client.setOverage(35);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("zero");
+        client.setIncome(42587);
+        client.setOverage(40);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("one");
+        client.setIncome(46300);
+        client.setOverage(45);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("zero");
+        client.setIncome(49860);
+        client.setOverage(50);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("one");
+        client.setIncome(47645);
+        client.setOverage(55);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("zero");
+        client.setIncome(42331);
+        client.setOverage(60);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("one");
+        client.setIncome(36451);
+        client.setOverage(65);
+        client.setLeftover(6);
+        client.setHouse(313378);
+        client.setHandsetPrice(161);
+        client.setOver15(0);
+        client.setAverageCallDuration(4);
+        client.setReportedSatisfaction("unsat");
+        client.setReportedUsageLevel("little");
+
+        clients.add(client);
+
+        client = new Client();
+        client.setCollege("zero");
+        client.setIncome(31930);
+        client.setOverage(70);
         client.setLeftover(6);
         client.setHouse(313378);
         client.setHandsetPrice(161);

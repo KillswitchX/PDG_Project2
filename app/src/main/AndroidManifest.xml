@@ -14,15 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"
+        <activity android:name=".WaitingActivity"
             android:screenOrientation="landscape"
             ></activity>
-        <activity android:name=".PlanificationActivity"
+        <activity android:name=".LoginActivity"
             android:screenOrientation="landscape"
             />
-        <activity android:name=".DiagramsActivity"
-            android:screenOrientation="landscape"
-            />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PlanificationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DiagramsActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MetricsActivity"
             android:screenOrientation="landscape" />

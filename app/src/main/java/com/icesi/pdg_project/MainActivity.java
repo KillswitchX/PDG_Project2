@@ -44,17 +44,21 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(int itemIndex, String itemName) {
                 switch (itemName){
                     case "Diagrams":
-
+                        Intent diagramsIntent = new Intent(MainActivity.this, DiagramsActivity.class);
+                        startActivity(diagramsIntent);
+                        break;
                     case "Metrics":
                         Intent metricsIntent = new Intent(MainActivity.this, MetricsActivity.class);
                         startActivity(metricsIntent);
                         break;
-
                     case "Clients":
                         Intent clientsIntent = new Intent(MainActivity.this, ClientsInfo.class);
                         startActivity(clientsIntent);
                         break;
                     case "Planification":
+                        Intent planificationIntent = new Intent(MainActivity.this, PlanificationActivity.class);
+                        startActivity(planificationIntent);
+                        break;
 
                 }
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
+
 
             }
 

@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlanificationActivity">
-
+    tools:context=".HomeActivity">
 
 
     <com.luseen.spacenavigation.SpaceNavigationView
-        android:id="@+id/planification_navigation"
+        android:id="@+id/home_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -28,5 +27,6 @@
 
 
         ></com.luseen.spacenavigation.SpaceNavigationView>
+
 
 </RelativeLayout>

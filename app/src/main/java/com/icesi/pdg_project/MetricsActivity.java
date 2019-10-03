@@ -25,17 +25,18 @@ public class MetricsActivity extends AppCompatActivity {
 
 
 
+        navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
         navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
         navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
-        navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
         navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
 
-        navigation.changeCurrentItem(1);
+        navigation.changeCurrentItem(2);
 
         navigation.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
             public void onCentreButtonClick() {
-
+                Intent homeIntent = new Intent(MetricsActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
             }
 
             @Override
@@ -47,9 +48,7 @@ public class MetricsActivity extends AppCompatActivity {
                         break;
                     case "Clients":
                         Intent clientsIntent = new Intent(MetricsActivity.this, ClientsInfo.class);
-
                         startActivity(clientsIntent);
-
                         break;
                     case "Planification":
                         Intent planificationIntent = new Intent(MetricsActivity.this, PlanificationActivity.class);
@@ -67,8 +66,12 @@ public class MetricsActivity extends AppCompatActivity {
         });
 
 
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent homeIntent = new Intent(MetricsActivity.this, HomeActivity.class);
+        startActivity(homeIntent);
     }
 
 }

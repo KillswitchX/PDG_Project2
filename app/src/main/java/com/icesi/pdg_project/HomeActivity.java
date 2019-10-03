@@ -1,29 +1,24 @@
 package com.icesi.pdg_project;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Space;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.content.Intent;
+import android.os.Bundle;
+
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     private SpaceNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
-
-        navigation = findViewById(R.id.main_navigation);
+        navigation = findViewById(R.id.home_navigation);
 
 
         navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
@@ -36,43 +31,40 @@ public class MainActivity extends AppCompatActivity {
         navigation.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
             public void onCentreButtonClick() {
-                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(homeIntent);
+
             }
 
             @Override
             public void onItemClick(int itemIndex, String itemName) {
                 switch (itemName){
                     case "Diagrams":
-
+                        Intent diagramsIntent = new Intent(HomeActivity.this, DiagramsActivity.class);
+                        startActivity(diagramsIntent);
+                        break;
                     case "Metrics":
-                        Intent metricsIntent = new Intent(MainActivity.this, MetricsActivity.class);
+                        Intent metricsIntent = new Intent(HomeActivity.this, MetricsActivity.class);
                         startActivity(metricsIntent);
                         break;
 
                     case "Clients":
-                        Intent clientsIntent = new Intent(MainActivity.this, ClientsInfo.class);
+                        Intent clientsIntent = new Intent(HomeActivity.this, ClientsInfo.class);
                         startActivity(clientsIntent);
                         break;
-                    case "Planification":
 
+                    case "Planification":
+                        Intent planificationIntent = new Intent(HomeActivity.this, PlanificationActivity.class);
+                        startActivity(planificationIntent);
+                        break;
                 }
 
             }
+
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
 
             }
-
         });
 
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
-        startActivity(homeIntent);
     }
 }

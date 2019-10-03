@@ -20,22 +20,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            app:labelVisibilityMode="labeled"
-            android:id="@+id/metrics_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            app:menu="@menu/menu">
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-
         <com.jjoe64.graphview.helper.GraphViewXML
             android:layout_width="match_parent"
             android:layout_height="355dp"
             android:layout_above="@+id/main_navigation"
 
             app:seriesData="0=5;2=5;3=0;4=2" />
+
+        <com.luseen.spacenavigation.SpaceNavigationView
+            android:id="@+id/metrics_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            app:active_item_color="@color/ca"
+            app:centre_button_color="@color/colorPrimaryDark"
+            app:active_centre_button_icon_color="@color/white"
+            app:inactive_centre_button_icon_color="@color/white"
+            app:inactive_item_color="@color/white"
+            app:space_background_color="@color/colorPrimary"
+            app:centre_button_icon="@drawable/home"
+            app:space_item_icon_size="@dimen/space_item_icon_default_size"
+            app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+            app:space_item_text_size="@dimen/space_item_text_default_size"
+
+
+            ></com.luseen.spacenavigation.SpaceNavigationView>
+
+
     </RelativeLayout>
 
 

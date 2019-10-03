@@ -7,15 +7,18 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.MenuItem;
+
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import com.icesi.pdg_project.Entity.Client;
+import com.luseen.spacenavigation.SpaceItem;
+import com.luseen.spacenavigation.SpaceNavigationView;
+import com.luseen.spacenavigation.SpaceOnClickListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,28 +33,57 @@ public class ClientsInfo extends AppCompatActivity {
 
     private HashMap<String, ArrayList<Client>> segmentedClients;
 
-    private BottomNavigationView navigation;
+    private SpaceNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clients_info);
 
-        navigation = findViewById(R.id.clients_navigation);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        navigation = findViewById(R.id.metrics_navigation);
+
+
+        navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
+        navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
+        navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
+        navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
+
+        navigation.changeCurrentItem(2);
+
+        navigation.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
-                    case R.id.menu_metric:
-                        Intent clientsIntent = new Intent(ClientsInfo.this, MetricsActivity.class);
-                        startActivity(clientsIntent);
+            public void onCentreButtonClick() {
+
+            }
+
+            @Override
+            public void onItemClick(int itemIndex, String itemName) {
+                switch (itemName){
+                    case "Diagrams":
+                        Intent diagramsIntent = new Intent(ClientsInfo.this, DiagramsActivity.class);
+                        startActivity(diagramsIntent);
                         break;
+                    case "Planification":
+                        Intent planificationIntent = new Intent(ClientsInfo.this, PlanificationActivity.class);
+                        startActivity(planificationIntent);
+                        break;
+                    case "Metrics":
+                        Intent metricsIntent = new Intent(ClientsInfo.this, MetricsActivity.class);
+
+                        startActivity(metricsIntent);
+
+
+                        break;
+
                 }
 
-                return false;
+            }
+
+            @Override
+            public void onItemReselected(int itemIndex, String itemName) {
+
             }
         });
-        navigation.getMenu().findItem(R.id.menu_client).setChecked(true);
     }
 
     @Override

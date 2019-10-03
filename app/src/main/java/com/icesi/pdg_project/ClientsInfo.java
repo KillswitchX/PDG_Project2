@@ -36,6 +36,22 @@ public class ClientsInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clients_info);
+
+        navigation = findViewById(R.id.clients_navigation);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.menu_metric:
+                        Intent clientsIntent = new Intent(ClientsInfo.this, MetricsActivity.class);
+                        startActivity(clientsIntent);
+                        break;
+                }
+
+                return false;
+            }
+        });
+        navigation.getMenu().findItem(R.id.menu_client).setChecked(true);
     }
 
     @Override
@@ -60,21 +76,7 @@ public class ClientsInfo extends AppCompatActivity {
 
 
     private void initView() {
-        navigation = findViewById(R.id.clients_navigation);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
-                    case R.id.menu_metric:
-                        Intent clientsIntent = new Intent(ClientsInfo.this, MainActivity.class);
-                        startActivity(clientsIntent);
-                        break;
-                }
 
-                return false;
-            }
-        });
-        navigation.getMenu().findItem(R.id.menu_client).setChecked(true);
 
         tableLayout = (TableLayout) findViewById(R.id.tableLayoutClients);
         spinnerClients = findViewById(R.id.clients_spinner_chooser);
@@ -167,7 +169,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // College
         TextView textViewCollege = new TextView(this);
-        textViewCollege.setText("Universidad  ");
+        textViewCollege.setText("College  ");
         textViewCollege.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewCollege.setPadding(15, 5, 5, 0);
         textViewCollege.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -175,7 +177,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Income
         TextView textViewIncome = new TextView(this);
-        textViewIncome.setText("Ingresos  ");
+        textViewIncome.setText("Income  ");
         textViewIncome.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewIncome.setPadding(15, 5, 5, 0);
         textViewIncome.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -183,7 +185,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Overage
         TextView textViewOverage = new TextView(this);
-        textViewOverage.setText("Sobrecargo promedio por mes  ");
+        textViewOverage.setText("Overage per month  ");
         textViewOverage.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewOverage.setPadding(15, 5, 5, 0);
         textViewOverage.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -191,7 +193,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // LeftOver
         TextView textViewLeftover = new TextView(this);
-        textViewLeftover.setText("Promedio de minutos sobrantes por mes  ");
+        textViewLeftover.setText("Leftover per month  ");
         textViewLeftover.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewLeftover.setPadding(15, 5, 5, 0);
         textViewLeftover.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -199,7 +201,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // House
         TextView textViewHouse = new TextView(this);
-        textViewHouse.setText("Valor de la vivienda  ");
+        textViewHouse.setText("House  ");
         textViewHouse.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewHouse.setPadding(15, 5, 5, 0);
         textViewHouse.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -207,7 +209,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Handset Price
         TextView textViewHandsetPrice = new TextView(this);
-        textViewHandsetPrice.setText("Costo del celular  ");
+        textViewHandsetPrice.setText("Handset Price  ");
         textViewHandsetPrice.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewHandsetPrice.setPadding(15, 5, 5, 0);
         textViewHandsetPrice.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -215,7 +217,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Average calls Over 15 minutes
         TextView textViewOver15 = new TextView(this);
-        textViewOver15.setText("Promedio llamadas (>15 min) por mes  ");
+        textViewOver15.setText("Calls over 15 min per month  ");
         textViewOver15.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewOver15.setPadding(15, 5, 5, 0);
         textViewOver15.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -223,7 +225,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Average Call Duration
         TextView textViewAverageCallDuration = new TextView(this);
-        textViewAverageCallDuration.setText("Duracion promedio de llamadas  ");
+        textViewAverageCallDuration.setText("Average call duration  ");
         textViewAverageCallDuration.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewAverageCallDuration.setPadding(15, 5, 5, 0);
         textViewAverageCallDuration.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -231,7 +233,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Reported Satisfaction
         TextView textViewReportedSatisfaction = new TextView(this);
-        textViewReportedSatisfaction.setText("Nivel de satisfacción reportada  ");
+        textViewReportedSatisfaction.setText("Reported satisfaction level  ");
         textViewReportedSatisfaction.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewReportedSatisfaction.setPadding(15, 5, 5, 0);
         textViewReportedSatisfaction.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -239,7 +241,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         // Reported Usage Level
         TextView textViewReportedUsageLevel = new TextView(this);
-        textViewReportedUsageLevel.setText("Nivel de uso reportado  ");
+        textViewReportedUsageLevel.setText("Reported usage level  ");
         textViewReportedUsageLevel.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         textViewReportedUsageLevel.setPadding(15, 5, 5, 0);
         textViewReportedUsageLevel.setBackgroundColor(getResources().getColor(R.color.colorPrimary));

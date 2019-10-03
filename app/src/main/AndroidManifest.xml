@@ -14,9 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PlanificationActivity"></activity>
+        <activity android:name=".DiagramsActivity" />
         <activity
             android:name=".MetricsActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ClientsInfo"
             android:screenOrientation="landscape" />

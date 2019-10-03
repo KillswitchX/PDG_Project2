@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent clientsIntent = new Intent(MainActivity.this, ClientsInfo.class);
                         startActivity(clientsIntent);
                         break;
+                    case R.id.menu_metric:
+                        Intent metricsIntent = new Intent(MainActivity.this, MetricsActivity.class);
+                        startActivity(metricsIntent);
+                        break;
                 }
 
                 return false;

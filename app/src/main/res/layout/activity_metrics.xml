@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MetricsActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:itemIconTint="#0095A9"
+        app:itemTextColor="#4BCDDB"
+        app:menu="@menu/menu_tool_metric"
+        android:layout_gravity="start">
+    </com.google.android.material.navigation.NavigationView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:labelVisibilityMode="labeled"
+            android:id="@+id/main_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            app:menu="@menu/menu">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <com.jjoe64.graphview.helper.GraphViewXML
+            android:layout_width="match_parent"
+            android:layout_height="355dp"
+            android:layout_above="@+id/main_navigation"
+
+            app:seriesData="0=5;2=5;3=0;4=2" />
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

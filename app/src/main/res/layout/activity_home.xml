@@ -29,11 +29,13 @@
                 android:paddingLeft="15dp"
                 android:text="Money:"
                 android:textColor="@color/white"
-                android:textSize="35sp"></TextView>
+                android:textSize="35sp"
+
+                ></TextView>
 
             <TextView
                 android:id="@+id/et_home_money"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:textColor="@color/white"
@@ -75,7 +77,7 @@
 
             <TextView
                 android:id="@+id/et_home_clients"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:textColor="@color/white"
@@ -115,7 +117,7 @@
 
             <TextView
                 android:id="@+id/et_home_turn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
                 android:textColor="@color/white"
@@ -126,6 +128,21 @@
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="15dp"
+        android:layout_toRightOf="@id/cardView_home_3"
+        android:layout_below="@id/cardView_home_2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+
+
+        ></com.google.android.material.card.MaterialCardView>
 
 
 

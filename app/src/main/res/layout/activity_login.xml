@@ -5,15 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiant_background"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:gravity="center"
+    android:layout_gravity="center"
+    >
+
 
     <LinearLayout
         android:id="@+id/login_linear1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:background="@drawable/dtedited"
+        android:backgroundTint="#161430"
+        android:gravity="center"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,6 +29,8 @@
             android:text="Please type your nickname:"
             android:textColor="@color/white"
             android:textSize="35sp"
+            android:layout_gravity="center"
+            android:gravity="center"
 
             ></TextView>
 
@@ -57,7 +67,7 @@
 
         <Button
             android:id="@+id/login_btn_login"
-            android:layout_width="140dp"
+            android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
@@ -65,7 +75,7 @@
             android:text="LOGIN"
             android:textColor="@color/white"
             android:background="@drawable/rounded"
-
+            android:gravity="center"
             ></Button>
 
     </LinearLayout>

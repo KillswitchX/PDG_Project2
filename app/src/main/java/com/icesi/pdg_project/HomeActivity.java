@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.luseen.spacenavigation.SpaceItem;
@@ -26,10 +27,20 @@ public class HomeActivity extends AppCompatActivity {
 
     private SpaceNavigationView navigation;
 
+    private TextView textViewMoney;
+
+    private TextView textViewClients;
+
+    private TextView textViewTurn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        textViewMoney = findViewById(R.id.et_home_money);
+        textViewClients = findViewById(R.id.et_home_clients);
+        textViewTurn = findViewById(R.id.et_home_turn);
 
         navigation = findViewById(R.id.home_navigation);
 
@@ -79,7 +90,24 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        this.getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        setMoney(2000);
+        setClients(100);
+        setTurn(1);
 
     }
 
@@ -109,6 +137,35 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
+    public void setMoney(int money){
+        String textMoney = "$" + money;
+        textViewMoney.setText(textMoney);
+    }
+
+    public void setClients(int clients){
+        String textClients = "" + clients;
+        textViewClients.setText(textClients);
+    }
+
+    public void setTurn(int turn){
+        String textTurn = "" + turn;
+        textViewTurn.setText(textTurn);
+    }
+
+    public String getMoney(){
+        return  textViewMoney.getText().toString();
+    }
+
+    public String getClients(){
+        return  textViewClients.getText().toString();
+    }
+
+    public String getTurn(){
+        return  textViewTurn.getText().toString();
+    }
+
+
 
 
 }

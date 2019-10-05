@@ -37,7 +37,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:src="@drawable/scatter"
                     android:id="@+id/img_sp"
                     />
                 <TextView
@@ -56,7 +56,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:src="@drawable/barchart"
                     android:id="@+id/img_bc"
                     />
                 <TextView
@@ -75,7 +75,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:src="@drawable/linegraphic"
                     android:id="@+id/img_lg"
                     />
                 <TextView
@@ -99,7 +99,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:src="@drawable/clientsgroup"
                     android:id="@+id/img_g"
                     />
                 <Spinner
@@ -121,10 +121,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp">
-                <ImageView
+                <TextView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:textColor="#ffff"
+                    android:text="X"
+                    android:gravity="center"
                     android:id="@+id/img_x"
                     />
                 <Spinner
@@ -141,10 +143,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp">
-                <ImageView
+                <TextView
                     android:layout_width="50dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/diagram"
+                    android:textColor="#ffff"
+                    android:text="Y"
+                    android:gravity="center"
                     android:id="@+id/img_y"
                     />
                 <Spinner

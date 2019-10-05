@@ -1,34 +1,32 @@
 package com.icesi.pdg_project;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
-public class MetricsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MetricsActivity extends AppCompatActivity  {
 
     private SpaceNavigationView navigation;
-    private DrawerLayout toolbar;
-    private ActionBarDrawerToggle mtoggle;
     private Spinner spinnerSG;
     private Dialog dialogSG;
     private Button selectSG;
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,18 +35,14 @@ public class MetricsActivity extends AppCompatActivity implements NavigationView
 
         dialogSG = new Dialog(this);
         navigation = findViewById(R.id.metrics_navigation);
-        toolbar = findViewById(R.id.drawer);
-        mtoggle=new ActionBarDrawerToggle(this,toolbar,R.string.open,R.string.close);
 
         navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
         navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
         navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
         navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
 
-        toolbar.addDrawerListener(mtoggle);
-        mtoggle.syncState();
-        NavigationView nv = findViewById(R.id.menu_tool_metric);
-        nv.setNavigationItemSelectedListener(this);
+        configureNavigationDrawer();
+        configureToolbar();
 
         navigation.changeCurrentItem(2);
 
@@ -110,30 +104,35 @@ public class MetricsActivity extends AppCompatActivity implements NavigationView
         dialogSG.show();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(mtoggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    private void configureToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        int id = menuItem.getItemId();
-
-        if(id == R.id.menu_sg){
-            Toast.makeText(this,"menu SG",Toast.LENGTH_LONG).show();
-            showDialogSG();
-        }
-        if(id == R.id.menu_vx){
-            Toast.makeText(this,"menu vx",Toast.LENGTH_LONG).show();
-        }
-        if(id == R.id.menu_vy){
-            Toast.makeText(this,"menu vy",Toast.LENGTH_LONG).show();
-        }
-
-        return false;
+    private void configureNavigationDrawer() {
+        drawerLayout = findViewById(R.id.drawer);
+        NavigationView navView = findViewById(R.id.menu_tool_metric);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int itemId = menuItem.getItemId();
+                if (itemId == R.id.menu_sg) {
+                    showDialogSG();
+                }
+                return false;
+            }
+        });
+    }  @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        switch(itemId) {
+            // Android home
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;      // manage other entries if you have it ...
+        }    return true;
     }
+
 }

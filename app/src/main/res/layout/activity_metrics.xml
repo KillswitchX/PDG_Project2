@@ -1,33 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".MetricsActivity"
-    android:id="@+id/drawer">
+    android:id="@+id/metrics">
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:itemIconTint="@color/colorAccent"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:menu="@menu/menu_tool_metric"
-        android:layout_gravity="start"
-        android:id="@+id/menu_tool_metric">
-    </com.google.android.material.navigation.NavigationView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.jjoe64.graphview.helper.GraphViewXML
             android:layout_width="match_parent"
-            android:layout_height="330dp"
-            android:layout_above="@+id/main_navigation"
-
+            android:layout_height="300dp"
+            android:layout_above="@+id/metrics_navigation"
+            android:layout_toRightOf="@id/container"
             app:seriesData="0=5;2=5;3=0;4=2" />
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:id="@+id/container"
+            android:background="@color/colorAccent"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graphics"
+                android:textColor="#ffff"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scatter plot"
+                    android:id="@+id/tv_sp"
+                    android:textColor="#ffff"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_bc"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bar chart"
+                    android:id="@+id/tv_bc"
+                    android:textColor="#ffff"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_lg"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Line graph"
+                    android:id="@+id/tv_lg"
+                    android:textColor="#ffff"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups"
+                android:textColor="#ffff"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_g"
+                    />
+                <Spinner
+                    android:id="@+id/metrics_spinner_groups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center|top"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Variables"
+                android:textColor="#ffff"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_x"
+                    />
+                <Spinner
+                    android:id="@+id/metrics_spinner_vx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center|top"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/diagram"
+                    android:id="@+id/img_y"
+                    />
+                <Spinner
+                    android:id="@+id/metrics_spinner_vy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center|top"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
 
         <com.luseen.spacenavigation.SpaceNavigationView
             android:id="@+id/metrics_navigation"
@@ -48,8 +177,4 @@
             app:space_item_text_size="@dimen/space_item_text_default_size"
             ></com.luseen.spacenavigation.SpaceNavigationView>
 
-
-    </RelativeLayout>
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

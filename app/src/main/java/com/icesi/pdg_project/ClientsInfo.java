@@ -41,7 +41,7 @@ public class ClientsInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clients_info);
 
-        tableLayout = (TableLayout) findViewById(R.id.tableLayoutClients);
+        tableLayout = findViewById(R.id.tableLayoutClients);
         spinnerClients = findViewById(R.id.clients_spinner_chooser);
         navigation = findViewById(R.id.metrics_navigation);
 
@@ -51,7 +51,7 @@ public class ClientsInfo extends AppCompatActivity {
         navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
         navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
         navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
-        navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));;
+        navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
 
         navigation.changeCurrentItem(0);
 
@@ -332,6 +332,7 @@ public class ClientsInfo extends AppCompatActivity {
 
         clients.add(client);
 
+        clients.get(0);
 
 
     }

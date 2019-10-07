@@ -41,7 +41,11 @@ public class ClientsInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clients_info);
 
+        tableLayout = (TableLayout) findViewById(R.id.tableLayoutClients);
+        spinnerClients = findViewById(R.id.clients_spinner_chooser);
         navigation = findViewById(R.id.metrics_navigation);
+
+        createColumns();
 
 
         navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
@@ -102,13 +106,8 @@ public class ClientsInfo extends AppCompatActivity {
 
         segmentedClients.put("clients", clients);
 
-
-
-
-
         initTestClients();
         initView();
-        createColumns();
         fillDataIntoTable(clients);
 
     }
@@ -116,9 +115,6 @@ public class ClientsInfo extends AppCompatActivity {
 
     private void initView() {
 
-
-        tableLayout = (TableLayout) findViewById(R.id.tableLayoutClients);
-        spinnerClients = findViewById(R.id.clients_spinner_chooser);
         String[] segments = {" Clients ", " SegmentA ", " SegmentB "};
         spinnerClients.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, segments));
     }
@@ -440,7 +436,7 @@ public class ClientsInfo extends AppCompatActivity {
         for (int i = 0; i < size; i++) {
             TableRow tableRow = new TableRow(this);
             tableRow.setLayoutParams(new TableRow.LayoutParams(
-                    TableRow.LayoutParams.FILL_PARENT,
+                    TableRow.LayoutParams.MATCH_PARENT,
                     TableRow.LayoutParams.WRAP_CONTENT));
 
             currentClient = clientsToFill.get(i);

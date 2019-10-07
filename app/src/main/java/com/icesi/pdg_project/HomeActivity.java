@@ -33,6 +33,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private TextView textViewTurn;
 
+    private Button btn_nextTurn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         textViewTurn = findViewById(R.id.et_home_turn);
 
         navigation = findViewById(R.id.home_navigation);
-
+        btn_nextTurn = findViewById(R.id.btn_next_turn);
 
         navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
         navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
@@ -89,6 +91,35 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+
+
+        btn_nextTurn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(HomeActivity.this);
+                alertDialogBuilder.setTitle("Confirm Turn...");
+                alertDialogBuilder.setIcon(R.drawable.ic_exit);
+                alertDialogBuilder.setMessage("Are you sure you did finish your turn?" +"\n"+ "\n");
+
+                alertDialogBuilder.setCancelable(false);
+
+                alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        });
+
 
         this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE

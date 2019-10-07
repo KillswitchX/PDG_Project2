@@ -17,9 +17,6 @@
         <activity android:name=".WaitingActivity"
             android:screenOrientation="landscape"
             ></activity>
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="landscape"
-            />
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="landscape" />
@@ -36,7 +33,7 @@
             android:name=".ClientsInfo"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

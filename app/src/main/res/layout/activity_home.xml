@@ -130,19 +130,22 @@
     </com.google.android.material.card.MaterialCardView>
 
 
-    <com.google.android.material.card.MaterialCardView
+    <Button
+        android:id="@+id/btn_next_turn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@drawable/rounded"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="15dp"
+        android:background="@drawable/rounded_dark"
+        android:text="Next turn"
+        android:textColor="@color/white"
+        android:textSize="35sp"
         android:layout_toRightOf="@id/cardView_home_3"
         android:layout_below="@id/cardView_home_2"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
 
-
-        ></com.google.android.material.card.MaterialCardView>
+        ></Button>
 
 
 

@@ -8,17 +8,15 @@
     tools:context=".MetricsActivity"
     android:id="@+id/metrics">
 
-
-
-        <com.jjoe64.graphview.helper.GraphViewXML
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/metrics_graph"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_above="@+id/metrics_navigation"
-            android:layout_toRightOf="@id/container"
-            app:seriesData="0=5;2=5;3=0;4=2" />
+            android:layout_toRightOf="@id/container"/>
         <LinearLayout
-            android:layout_width="170dp"
-            android:layout_height="220dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/container"
             android:background="@color/colorAccent"
@@ -44,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Scatter plot"
-                    android:id="@+id/tv_sp"
+                    android:id="@+id/metrics_tv_sp"
                     android:textColor="#ffff"
                     />
             </LinearLayout>
@@ -63,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bar chart"
-                    android:id="@+id/tv_bc"
+                    android:id="@+id/metrics_tv_bc"
                     android:textColor="#ffff"
                     />
             </LinearLayout>
@@ -82,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Line graph"
-                    android:id="@+id/tv_lg"
+                    android:id="@+id/metrics_tv_lg"
                     android:textColor="#ffff"
                     />
             </LinearLayout>

@@ -8,25 +8,17 @@
 
 
 
-    <com.luseen.spacenavigation.SpaceNavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/planification_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="bottom"
         android:layout_gravity="bottom"
-        app:active_item_color="@color/ca"
-        app:centre_button_color="@color/colorPrimaryDark"
-        app:active_centre_button_icon_color="@color/white"
-        app:inactive_centre_button_icon_color="@color/white"
-        app:inactive_item_color="@color/white"
-        app:space_background_color="@color/colorPrimary"
-        app:centre_button_icon="@drawable/home"
-        app:space_item_icon_size="@dimen/space_item_icon_default_size"
-        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
-        app:space_item_text_size="@dimen/space_item_text_default_size"
+        app:menu="@menu/menu"
+        app:itemIconSize="28dp"
 
 
-        ></com.luseen.spacenavigation.SpaceNavigationView>
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

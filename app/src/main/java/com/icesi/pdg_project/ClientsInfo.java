@@ -58,6 +58,22 @@ public class ClientsInfo extends AppCompatActivity {
                     startActivity(home);
 
                 }
+                if(menuItem.getItemId()==R.id.menu_diagram){
+                    Intent home = new Intent(ClientsInfo.this, DiagramsActivity.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_planning){
+                    Intent home = new Intent(ClientsInfo.this, PlanificationActivity.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_metric){
+                    Intent home = new Intent(ClientsInfo.this, MetricsActivity.class);
+                    startActivity(home);
+
+                }
+
 
                 return false;
             }

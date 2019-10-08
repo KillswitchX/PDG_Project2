@@ -1,17 +1,20 @@
 package com.icesi.pdg_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
 public class MetricsActivity extends AppCompatActivity  {
 
-    private SpaceNavigationView navigation;
+    private BottomNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,44 +23,33 @@ public class MetricsActivity extends AppCompatActivity  {
 
         navigation = findViewById(R.id.metrics_navigation);
 
-        navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
-        navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
-        navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
-        navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
-
-
-        navigation.changeCurrentItem(2);
-
-        navigation.setSpaceOnClickListener(new SpaceOnClickListener() {
+        navigation.setSelectedItemId(R.id.menu_metric);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onCentreButtonClick() {
-                Intent homeIntent = new Intent(MetricsActivity.this, HomeActivity.class);
-                startActivity(homeIntent);
-            }
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                if(menuItem.getItemId()==R.id.menu_home){
+                    Intent home = new Intent(MetricsActivity.this, HomeActivity.class);
+                    startActivity(home);
 
-            @Override
-            public void onItemClick(int itemIndex, String itemName) {
-                switch (itemName){
-                    case "Diagrams":
-                        Intent diagramsIntent = new Intent(MetricsActivity.this, DiagramsActivity.class);
-                        startActivity(diagramsIntent);
-                        break;
-                    case "Clients":
-                        Intent clientsIntent = new Intent(MetricsActivity.this, ClientsInfo.class);
-                        startActivity(clientsIntent);
-                        break;
-                    case "Planification":
-                        Intent planificationIntent = new Intent(MetricsActivity.this, PlanificationActivity.class);
-                        startActivity(planificationIntent);
-                        break;
+                }
+                if(menuItem.getItemId()==R.id.menu_client){
+                    Intent home = new Intent(MetricsActivity.this, ClientsInfo.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_planning){
+                    Intent home = new Intent(MetricsActivity.this, PlanificationActivity.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_diagram){
+                    Intent home = new Intent(MetricsActivity.this, DiagramsActivity.class);
+                    startActivity(home);
 
                 }
 
-            }
 
-            @Override
-            public void onItemReselected(int itemIndex, String itemName) {
-
+                return false;
             }
         });
 

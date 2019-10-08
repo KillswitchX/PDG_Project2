@@ -60,6 +60,21 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(clients);
 
                 }
+                if(menuItem.getItemId()==R.id.menu_metric){
+                    Intent home = new Intent(HomeActivity.this, MetricsActivity.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_diagram){
+                    Intent home = new Intent(HomeActivity.this, DiagramsActivity.class);
+                    startActivity(home);
+
+                }
+                if(menuItem.getItemId()==R.id.menu_planning){
+                    Intent home = new Intent(HomeActivity.this, PlanificationActivity.class);
+                    startActivity(home);
+
+                }
 
 
 

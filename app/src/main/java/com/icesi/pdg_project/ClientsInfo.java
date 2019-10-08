@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -16,6 +17,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.icesi.pdg_project.Entity.Client;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
@@ -34,7 +36,7 @@ public class ClientsInfo extends AppCompatActivity {
 
     private HashMap<String, ArrayList<Client>> segmentedClients;
 
-    private SpaceNavigationView navigation;
+    private BottomNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,46 +49,20 @@ public class ClientsInfo extends AppCompatActivity {
 
         createColumns();
 
-
-        navigation.addSpaceItem(new SpaceItem("Clients", R.drawable.client));
-        navigation.addSpaceItem(new SpaceItem("Diagrams", R.drawable.diagram));
-        navigation.addSpaceItem(new SpaceItem("Metrics", R.drawable.metrics));
-        navigation.addSpaceItem(new SpaceItem("Planification", R.drawable.money));
-
-        navigation.changeCurrentItem(0);
-
-        navigation.setSpaceOnClickListener(new SpaceOnClickListener() {
+        navigation.setSelectedItemId(R.id.menu_client);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onCentreButtonClick() {
-                Intent homeIntent = new Intent(ClientsInfo.this, HomeActivity.class);
-                startActivity(homeIntent);
-            }
-
-            @Override
-            public void onItemClick(int itemIndex, String itemName) {
-                switch (itemName){
-                    case "Diagrams":
-                        Intent diagramsIntent = new Intent(ClientsInfo.this, DiagramsActivity.class);
-                        startActivity(diagramsIntent);
-                        break;
-                    case "Planification":
-                        Intent planificationIntent = new Intent(ClientsInfo.this, PlanificationActivity.class);
-                        startActivity(planificationIntent);
-                        break;
-                    case "Metrics":
-                        Intent metricsIntent = new Intent(ClientsInfo.this, MetricsActivity.class);
-                        startActivity(metricsIntent);
-                        break;
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                if(menuItem.getItemId()==R.id.menu_home){
+                    Intent home = new Intent(ClientsInfo.this, HomeActivity.class);
+                    startActivity(home);
 
                 }
 
-            }
-
-            @Override
-            public void onItemReselected(int itemIndex, String itemName) {
-
+                return false;
             }
         });
+
 
         this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
